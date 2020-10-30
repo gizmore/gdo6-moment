@@ -8,6 +8,8 @@ final class Module_Moment extends GDO_Module
 {
 	public $module_priority = 15;
 	
+	public function onLoadLanguage() { return $this->loadLanguage('lang/moment'); }
+	
 	public function onIncludeScripts()
 	{
 		$min = Module_Core::instance()->cfgMinifyJS() === 'no' ? '' : '.min';
