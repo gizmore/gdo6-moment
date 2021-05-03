@@ -3,6 +3,7 @@ namespace GDO\Moment;
 
 use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
+use GDO\Javascript\Module_Javascript;
 
 final class Module_Moment extends GDO_Module
 {
@@ -12,7 +13,7 @@ final class Module_Moment extends GDO_Module
 	
 	public function onIncludeScripts()
 	{
-		$min = Module_Core::instance()->cfgMinifyJS() === 'no' ? '' : '.min';
+		$min = Module_Javascript::instance()->jsMinAppend();
 		
 		$this->addBowerJavascript("moment/min/moment-with-locales$min.js");
 		$this->addBowerJavascript("moment-timezone/builds/moment-timezone-with-data$min.js");
