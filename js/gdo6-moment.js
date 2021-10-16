@@ -6,7 +6,6 @@ window.GDO.Moment = {
 	 * Convert PHP dateformat to moment.js
 	 */
 	convertFormat: function(format) {
-		console.log(format);
 		let replace = {
 			'd': 'DD',
 			'D': 'ddd',
