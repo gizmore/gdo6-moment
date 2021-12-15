@@ -16,7 +16,7 @@ final class Module_Moment extends GDO_Module
 	
 	public function onIncludeScripts()
 	{
-		$min = Module_Javascript::instance()->jsMinAppend();
+		$min = Module_Javascript::instance()->cfgMinAppend();
 		
 		$this->addBowerJS("moment/min/moment-with-locales$min.js");
         $this->addBowerJS("moment-timezone/builds/moment-timezone-with-data$min.js");
